@@ -1,19 +1,52 @@
-import React, { Component } from 'react'
-import './App.css'
+import React from "react"
+import ScreenShifter from "./ScreenShifter"
 
-class App extends Component {
+export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.submitForm = this.submitForm.bind(this)
+    this.nextScreen = this.nextScreen.bind(this)
+    this.updateField = this.updateField.bind(this)
+
+    this.state = {
+      currentScreenIndex: 0,
+      isSubmitting: false,
+      submissionError: null,
+      formValues: {
+        title: null,
+        name: null,
+        dob: null,
+        location: null,
+        datetime: null,
+        feedbackScore: null,
+        feedbackText: null
+      },
+    }
+  }
+
+  submitForm() {
+    alert("TODO")
+  }
+
+  nextScreen() {
+    alert("TODO")
+  }
+
+  updateField(fieldName, value) {
+    alert("TODO")
+  }
+
   render() {
+        // <WelcomeScreen nextScreen={this.nextScreen} />
+        // <StageOneScreen nextScreen={this.nextScreen} />
+        // <StageTwoScreen nextScreen={this.nextScreen} />
+        // <SuccessScreen />
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ScreenShifter currentScreenIndex={this.state.currentScreenIndex}>
+        <div style={{background: "red"}} onClick={() => this.setState({currentScreenIndex: 1})}>hello</div>
+        <div style={{background: "blue"}}>world</div>
+      </ScreenShifter>
     )
   }
 }
-
-export default App
