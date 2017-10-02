@@ -33,7 +33,11 @@ export default class App extends React.Component {
   }
 
   updateField(fieldName, value) {
-    alert(`TODO ${fieldName} ${value}`)
+    this.setState({
+      formValues: Object.assign({}, this.state.formValues, {
+        [fieldName]: value,
+      }),
+    })
   }
 
   render() {
