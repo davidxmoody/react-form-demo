@@ -29,7 +29,7 @@ export default class App extends React.Component {
   }
 
   submitForm() {
-    alert("TODO")
+    alert(`TODO implement this ${JSON.stringify(this.state.formValues, null, 2)}`)
   }
 
   updateField(fieldName, value) {
