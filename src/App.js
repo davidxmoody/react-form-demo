@@ -1,9 +1,9 @@
 import React from "react"
-import ScreenShifter from "./ScreenShifter"
-import WelcomeScreen from "./screens/WelcomeScreen"
-import StageOneScreen from "./screens/StageOneScreen"
-import StageTwoScreen from "./screens/StageTwoScreen"
-import SuccessScreen from "./screens/SuccessScreen"
+import ScreenShifter from "./components/ScreenShifter"
+import WelcomeScreen from "./components/screens/WelcomeScreen"
+import StageOneScreen from "./components/screens/StageOneScreen"
+import StageTwoScreen from "./components/screens/StageTwoScreen"
+import SuccessScreen from "./components/screens/SuccessScreen"
 
 export default class App extends React.Component {
   constructor(props) {
