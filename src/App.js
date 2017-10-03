@@ -17,7 +17,7 @@ export default class App extends React.Component {
     this.state = {
       currentScreenIndex: 0,
       isSubmitting: false,
-      submissionError: null,
+      submissionError: false,
       formValues: {
         title: null,
         name: null,
@@ -31,8 +31,25 @@ export default class App extends React.Component {
   }
 
   submitForm() {
+    this.setState({
+      isSubmitting: true,
+      submissionError: false,
+    })
+
     return submitSurvey(this.state.formValues)
-      .then(() => alert("done"))
+      .then(() => {
+        this.setState({
+          isSubmitting: false,
+          submissionError: false,
+          currentScreenIndex: 3,
+        })
+      })
+      .catch(() => {
+        this.setState({
+          isSubmitting: false,
+          submissionError: true,
+        })
+      })
   }
 
   updateField(fieldName, value) {
