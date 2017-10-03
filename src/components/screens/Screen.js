@@ -5,7 +5,7 @@ import "./Screen.css"
 export default function Screen(props) {
   return (
     <div className="screen">
-      <h2>{props.title}</h2>
+      <h2 className="screen__title">{props.title}</h2>
       {props.children}
     </div>
   )
