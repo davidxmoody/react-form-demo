@@ -9,7 +9,7 @@ export default function TextField(props) {
         <div>
           <input
             type="text"
-            value={props.value}
+            value={props.value || ""}
             onChange={(e) => props.onChange(e.target.value)}
           />
         </div>
