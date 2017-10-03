@@ -22,7 +22,9 @@ export default function StageTwoScreen(props) {
         value={props.formValues.feedbackText}
         onChange={(value) => props.updateField("feedbackText", value)}
       />
-      <Button onClick={props.submitForm}>Submit</Button>
+      <Button busy={props.isSubmitting} onClick={props.submitForm}>
+        Submit
+      </Button>
     </div>
   )
 }
