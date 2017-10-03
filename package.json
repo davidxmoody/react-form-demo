@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.2",
     "node-sass-chokidar": "0.0.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -11,6 +12,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "npm run build && node server.js",
     "build": "react-scripts build && npm run build-css",
     "dev": "react-scripts start",
     "eject": "react-scripts eject"

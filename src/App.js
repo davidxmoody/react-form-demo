@@ -5,6 +5,8 @@ import StageOneScreen from "./components/screens/StageOneScreen"
 import StageTwoScreen from "./components/screens/StageTwoScreen"
 import SuccessScreen from "./components/screens/SuccessScreen"
 
+import submitSurvey from "./submit-survey"
+
 export default class App extends React.Component {
   constructor(props) {
     super(props)
@@ -29,7 +31,8 @@ export default class App extends React.Component {
   }
 
   submitForm() {
-    alert(`TODO implement this ${JSON.stringify(this.state.formValues, null, 2)}`)
+    return submitSurvey(this.state.formValues)
+      .then(() => alert("done"))
   }
 
   updateField(fieldName, value) {
