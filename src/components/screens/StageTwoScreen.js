@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import Button from "../controls/Button"
 import TextField from "../controls/TextField"
+import Screen from "./Screen"
 
 export default function StageTwoScreen(props) {
   return (
-    <div>
-      <h2>Part two</h2>
+    <Screen title="Part two">
       <TextField
         label="Your current location"
         value={props.formValues.location}
@@ -25,7 +25,7 @@ export default function StageTwoScreen(props) {
       <Button busy={props.isSubmitting} onClick={props.submitForm}>
         Submit
       </Button>
-    </div>
+    </Screen>
   )
 }
 

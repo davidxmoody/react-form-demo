@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import Button from "../controls/Button"
 import TextField from "../controls/TextField"
+import Screen from "./Screen"
 
 export default function StageOneScreen(props) {
   return (
-    <div>
-      <h2>Part one</h2>
+    <Screen title="Part one">
       <TextField
         label="Title"
         value={props.formValues.title}
@@ -23,7 +23,7 @@ export default function StageOneScreen(props) {
         onChange={(value) => props.updateField("dob", value)}
       />
       <Button onClick={props.nextScreen}>Next</Button>
-    </div>
+    </Screen>
   )
 }
 

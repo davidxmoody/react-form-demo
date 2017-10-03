@@ -1,0 +1,13 @@
+.text-field {
+  margin-bottom: 20px;
+
+  &__label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
