@@ -6,7 +6,7 @@ const POST_ENDPOINT = "/submit-survey"
 const FORCE_SUCCESS = true
 
 export default function(formValues) {
-  return fakeDelay(1000)
+  return fakeDelay(2000)
     .then(() => fetch(POST_ENDPOINT, {
       headers: {'Content-Type': 'application/json'},
       method: "POST",
