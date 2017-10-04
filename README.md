@@ -29,3 +29,4 @@ npm start
 - There is no "back" button to go back to the first stage of the form
 - Not tested in any browsers other than Chrome and Chrome for Android
 - Keyboard controls aren't great (pressing enter does nothing and you can accidentally tab into fields on the next step and break it)
+- I also just noticed that the "I read the instructions" comment gets removed when the HTML is minified (it's in the source)
