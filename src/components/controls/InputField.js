@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./InputField.css"
 
 export default function InputField(props) {
-  const showValidTick = props.validationRegex && (props.value || "").match(props.validationRegex)
+  const showValidTick = props.isValid && props.isValid(props.value)
   const showActionButton = props.actionButtonText && props.actionButtonAction
 
   return (
@@ -31,7 +31,7 @@ InputField.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  validationRegex: PropTypes.any,
+  isValid: PropTypes.func,
   actionButtonText: PropTypes.string,
   actionButtonAction: PropTypes.func,
 }
