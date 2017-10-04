@@ -27,6 +27,7 @@ export default function StageTwoScreen(props) {
       <InputField
         label="Additional feedback"
         value={props.formValues.feedbackText}
+        type="textarea"
         onChange={(value) => props.updateField("feedbackText", value)}
       />
       <Button busy={props.isSubmitting} onClick={props.submitForm}>

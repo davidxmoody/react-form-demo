@@ -6,6 +6,8 @@ export default function InputField(props) {
   const showValidTick = props.isValid && props.isValid(props.value)
   const showActionButton = props.actionButtonText && props.actionButtonAction
 
+  const Input = props.type === "textarea" ? "textarea" : "input"
+
   return (
     <div className={`text-field ${showValidTick ? "text-field--valid" : ""}`}>
       <label>
@@ -15,7 +17,7 @@ export default function InputField(props) {
             {props.actionButtonText}
           </button>
         )}
-        <input
+        <Input
           className="text-field__input"
           type={props.type}
           value={props.value || ""}
