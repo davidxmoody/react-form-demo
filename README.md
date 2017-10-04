@@ -8,6 +8,7 @@ You can view a static version on [GitHub Pages](https://davidxmoody.github.io/re
 
 ```
 git clone https://github.com/davidxmoody/react-form-demo.git
+cd react-form-demo
 npm i
 npm start
 # Go to http://localhost:8888
