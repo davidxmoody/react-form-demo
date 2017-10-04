@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Button from "../controls/Button"
-import TextField from "../controls/TextField"
+import InputField from "../controls/InputField"
 import Screen from "../Screen"
 
 export default function StageTwoScreen(props) {
   return (
     <Screen title="Part two">
-      <TextField
+      <InputField
         label="Your current location"
         value={props.formValues.location}
         onChange={(value) => props.updateField("location", value)}
@@ -18,12 +18,12 @@ export default function StageTwoScreen(props) {
             .catch(() => alert("Sorry, could not automatically lookup your location, please enter it manually"))
         }}
       />
-      <TextField
+      <InputField
         label="Your current date and time"
         value={props.formValues.datetime}
         onChange={(value) => props.updateField("datetime", value)}
       />
-      <TextField
+      <InputField
         label="Additional feedback"
         value={props.formValues.feedbackText}
         onChange={(value) => props.updateField("feedbackText", value)}

@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "./TextField.css"
+import "./InputField.css"
 
-export default function TextField(props) {
+export default function InputField(props) {
   const showValidTick = props.validationRegex && (props.value || "").match(props.validationRegex)
   const showActionButton = props.actionButtonText && props.actionButtonAction
 
@@ -17,7 +17,7 @@ export default function TextField(props) {
         )}
         <input
           className="text-field__input"
-          type="text"
+          type={props.type}
           value={props.value || ""}
           onChange={(e) => props.onChange(e.target.value)}
         />
@@ -26,11 +26,16 @@ export default function TextField(props) {
   )
 }
 
-TextField.propTypes = {
+InputField.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string,
+  type: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   validationRegex: PropTypes.any,
   actionButtonText: PropTypes.string,
   actionButtonAction: PropTypes.func,
+}
+
+InputField.defaultProps = {
+  type: "text",
 }

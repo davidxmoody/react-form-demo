@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Button from "../controls/Button"
-import TextField from "../controls/TextField"
+import InputField from "../controls/InputField"
 import DropdownField from "../controls/DropdownField"
 import Screen from "../Screen"
 
@@ -14,12 +14,12 @@ export default function StageOneScreen(props) {
         onChange={(value) => props.updateField("title", value)}
         options={["Mr", "Mrs", "Ms", "Miss"]}
       />
-      <TextField
+      <InputField
         label="Name"
         value={props.formValues.name}
         onChange={(value) => props.updateField("name", value)}
       />
-      <TextField
+      <InputField
         label="Date of birth (DD/MM/YYYY)"
         value={props.formValues.dob}
         onChange={(value) => props.updateField("dob", value)}
