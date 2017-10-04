@@ -11,6 +11,12 @@ export default function StageTwoScreen(props) {
         label="Your current location"
         value={props.formValues.location}
         onChange={(value) => props.updateField("location", value)}
+        actionButtonText="Tap to automatically detect"
+        actionButtonAction={() => {
+          props.getLocation()
+            .then((location) => props.updateField("location", location))
+            .catch(() => alert("Sorry, could not automatically lookup your location, please enter it manually"))
+        }}
       />
       <TextField
         label="Your current date and time"
@@ -40,4 +46,5 @@ StageTwoScreen.propTypes = {
   isSubmitting: PropTypes.bool.isRequired,
   submissionError: PropTypes.any,
   submitForm: PropTypes.func.isRequired,
+  getLocation: PropTypes.func.isRequired,
 }

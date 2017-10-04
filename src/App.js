@@ -6,6 +6,7 @@ import StageTwoScreen from "./components/screens/StageTwoScreen"
 import SuccessScreen from "./components/screens/SuccessScreen"
 
 import submitSurvey from "./submit-survey"
+import getLocation from "./get-location"
 
 export default class App extends React.Component {
   constructor(props) {
@@ -77,6 +78,7 @@ export default class App extends React.Component {
           isSubmitting={this.state.isSubmitting}
           submissionError={this.state.submissionError}
           submitForm={this.submitForm}
+          getLocation={getLocation}
         />
         <SuccessScreen />
       </ScreenShifter>
