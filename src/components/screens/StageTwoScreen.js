@@ -18,7 +18,7 @@ export default function StageTwoScreen(props) {
         onChange={(value) => props.updateField("datetime", value)}
       />
       <TextField
-        label="Any feedback?"
+        label="Additional feedback"
         value={props.formValues.feedbackText}
         onChange={(value) => props.updateField("feedbackText", value)}
       />
