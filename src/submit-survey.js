@@ -3,7 +3,7 @@
 const POST_ENDPOINT = "/submit-survey"
 
 // For testing in dev or hosting on github pages (where the POST will fail)
-const FORCE_SUCCESS = true
+const FORCE_SUCCESS = false
 
 export default function(formValues) {
   return fakeDelay(2500)

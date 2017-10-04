@@ -30,6 +30,9 @@ export default function StageTwoScreen(props) {
         type="textarea"
         onChange={(value) => props.updateField("feedbackText", value)}
       />
+      {props.submissionError && (
+        <p style={{color: "darkred"}}>An error occurred, please try again later</p>
+      )}
       <Button busy={props.isSubmitting} onClick={props.submitForm}>
         Submit
       </Button>
