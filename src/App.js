@@ -24,7 +24,7 @@ export default class App extends React.Component {
         name: null,
         dob: null,
         location: null,
-        datetime: null,
+        datetime: getCurrentDatetime(),
         feedbackScore: null,
         feedbackText: null
       },
@@ -84,4 +84,10 @@ export default class App extends React.Component {
       </ScreenShifter>
     )
   }
+}
+
+function getCurrentDatetime() {
+  // Slight hack due to the format that the "datetime-local" input supports
+  const isoDate = new Date().toISOString()
+  return isoDate.substring(0, 16)
 }

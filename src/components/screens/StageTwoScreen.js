@@ -21,6 +21,7 @@ export default function StageTwoScreen(props) {
       <InputField
         label="Your current date and time"
         value={props.formValues.datetime}
+        type="datetime-local"
         onChange={(value) => props.updateField("datetime", value)}
       />
       <InputField
