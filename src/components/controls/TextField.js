@@ -19,6 +19,7 @@ export default function TextField(props) {
 }
 
 TextField.propTypes = {
+  label: PropTypes.string.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 }

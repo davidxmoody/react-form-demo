@@ -1,4 +1,4 @@
-.text-field {
+.dropdown-field {
   margin-bottom: 20px;
 
   &__label {
@@ -12,5 +12,9 @@
     width: 100%;
     border-radius: 5px;
     box-sizing: border-box;
+  }
+
+  &__default-option {
+    color: #666;
   }
 }
