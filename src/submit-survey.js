@@ -8,7 +8,7 @@ const FORCE_SUCCESS = false
 export default function(formValues) {
   return fakeDelay(2500)
     .then(() => fetch(POST_ENDPOINT, {
-      headers: {'Content-Type': 'application/json'},
+      headers: {"Content-Type": "application/json"},
       method: "POST",
       body: JSON.stringify(formValues),
     }))

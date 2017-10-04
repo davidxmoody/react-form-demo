@@ -25,7 +25,7 @@ export default class App extends React.Component {
         dob: null,
         location: null,
         datetime: getCurrentDatetime(),
-        feedbackText: null
+        feedbackText: null,
       },
     }
   }
