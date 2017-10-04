@@ -9,7 +9,7 @@ export default function WelcomeScreen(props) {
       <p>This is a simple React form created by David Moody</p>
       <p>
         You can view the source
-        on <a href="https://github.com/davidxmoody/react-form-demo" target="_blank">GitHub</a>
+        on <a href="https://github.com/davidxmoody/react-form-demo" target="_blank" rel="noopener noreferrer">GitHub</a>
       </p>
       <Button onClick={props.nextScreen}>Next</Button>
     </Screen>

@@ -24,7 +24,7 @@ export default function DropdownField(props) {
           </option>
 
           {props.options.map((val) => (
-            <option value={val}>{val}</option>
+            <option key={val} value={val}>{val}</option>
           ))}
         </select>
       </label>
