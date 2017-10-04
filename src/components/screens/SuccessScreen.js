@@ -3,9 +3,10 @@ import Screen from "./Screen"
 
 export default function WelcomeScreen(props) {
   return (
-    <Screen title="Success!">
+    <Screen title="Thank you!">
       <p>
-        Reload the app if you would like to try it again
+        Your data has been submitted to the server.
+        Reload the app if you would like to try it again.
       </p>
     </Screen>
   )
