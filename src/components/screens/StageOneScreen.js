@@ -23,6 +23,7 @@ export default function StageOneScreen(props) {
         label="Date of birth (DD/MM/YYYY)"
         value={props.formValues.dob}
         onChange={(value) => props.updateField("dob", value)}
+        validationRegex={/^\d{2}\/\d{2}\/\d{4}$/}
       />
       <Button onClick={props.nextScreen}>Next</Button>
     </Screen>
