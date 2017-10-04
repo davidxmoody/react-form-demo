@@ -41,7 +41,6 @@ StageTwoScreen.propTypes = {
   formValues: PropTypes.shape({
     location: PropTypes.string,
     datetime: PropTypes.string,
-    feedbackScore: PropTypes.number, // TODO implement this or delete it
     feedbackText: PropTypes.string,
   }).isRequired,
   updateField: PropTypes.func.isRequired,
