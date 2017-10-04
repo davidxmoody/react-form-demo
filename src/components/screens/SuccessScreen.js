@@ -1,7 +1,7 @@
 import React from "react"
-import Screen from "./Screen"
+import Screen from "../Screen"
 
-export default function WelcomeScreen(props) {
+export default function SuccessScreen() {
   return (
     <Screen title="Thank you!">
       <p>Your data has been submitted</p>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Button from "../controls/Button"
 import TextField from "../controls/TextField"
 import DropdownField from "../controls/DropdownField"
-import Screen from "./Screen"
+import Screen from "../Screen"
 
 export default function StageOneScreen(props) {
   return (

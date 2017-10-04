@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Button from "../controls/Button"
 import TextField from "../controls/TextField"
-import Screen from "./Screen"
+import Screen from "../Screen"
 
 export default function StageTwoScreen(props) {
   return (
